@@ -8,8 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/auth.js" defer></script>
 </head>
-<body>
+<body class="gate-open">
+  <div id="auth-gate" class="auth-gate">
+    <div class="auth-card">
+      <div class="auth-label">Riêng tư</div>
+      <h1 class="auth-title">Hoàng Mạnh<br>&amp; Phương Thảo</h1>
+      <div class="auth-divider"></div>
+      <p class="auth-subtitle">Vui lòng nhập mật khẩu để xem album cưới.</p>
+      <form id="auth-form" class="auth-form">
+        <input type="password" id="auth-input" class="auth-input" placeholder="Mật khẩu" autocomplete="off" />
+        <button type="submit" class="auth-btn">Xem album</button>
+        <p id="auth-error" class="auth-error" hidden>Mật khẩu chưa đúng, thử lại nhé 💛</p>
+      </form>
+    </div>
+  </div>
+
   <section class="hero" style="background-image: url('img/08.jpg');">
     <div class="hero-content">
       <div class="hero-label">We are getting married</div>

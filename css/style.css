@@ -16,6 +16,111 @@
   box-sizing: border-box;
 }
 
+/* ===== Auth gate ===== */
+.gate-open {
+  overflow: hidden;
+}
+
+.auth-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background-image: linear-gradient(180deg, rgba(30, 22, 20, 0.55), rgba(30, 22, 20, 0.7)), url('../img/08.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 250, 246, 0.96);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 44px 32px;
+}
+
+.auth-label {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.auth-title {
+  font-family: var(--font-script);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  line-height: 1.15;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.auth-divider {
+  width: 64px;
+  height: 2px;
+  background: var(--color-gold-light);
+  margin: 20px auto;
+}
+
+.auth-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--color-blush-dark);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.auth-input:focus {
+  border-color: var(--color-gold);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.auth-btn:hover {
+  background: #a67c50;
+}
+
+.auth-error {
+  margin: 4px 0 0;
+  color: #c0665c;
+  font-size: 0.88rem;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
