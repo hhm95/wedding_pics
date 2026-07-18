@@ -1,22 +1,4 @@
-/* =========================================================
-   CỔNG MẬT KHẨU (đơn giản, phía trình duyệt)
-   ---------------------------------------------------------
-   Mật khẩu KHÔNG lưu plaintext — chỉ lưu hash SHA-256 bên dưới.
-   Khi có người nhập, chuỗi nhập vào được hash rồi so với hash này.
-
-   ĐỔI MẬT KHẨU: tạo hash SHA-256 của mật khẩu mới rồi thay vào
-   PASSWORD_HASH. Có thể tạo hash bằng 1 trong 2 cách:
-     - Terminal:  printf '%s' 'matkhaumoi' | sha256sum
-     - Trình duyệt (Console F12):
-         crypto.subtle.digest('SHA-256', new TextEncoder().encode('matkhaumoi'))
-           .then(b => console.log([...new Uint8Array(b)]
-             .map(x => x.toString(16).padStart(2,'0')).join('')));
-
-   Lưu ý: đây chỉ là "rào nhẹ". Hash giúp giấu mật khẩu khỏi người
-   xem source, nhưng site tĩnh nên vẫn có thể bị bypass và ẢNH VẪN
-   truy cập trực tiếp qua URL. Không phải bảo mật thật.
-   ========================================================= */
-var PASSWORD_HASH = "2801c4b84827abaf2fc70a2ecb19511c5b1e6b21cc4ced512ebe2ba769b8178b"; // sha256("manhthao")
+var PASSWORD_HASH = "2801c4b84827abaf2fc70a2ecb19511c5b1e6b21cc4ced512ebe2ba769b8178b";
 var SESSION_KEY = "wedding_auth_ok";
 
 (function () {
